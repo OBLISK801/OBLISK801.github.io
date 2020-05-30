@@ -388,7 +388,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    477
+                    961
                 </div>
                 
 
@@ -400,18 +400,38 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><h4 id="win10-node-js-git-github"><a href="#win10-node-js-git-github" class="headerlink" title="win10+node.js+git+github"></a>win10+node.js+git+github</h4><ul>
+                <h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="win10-node-js-git-github"><a href="#win10-node-js-git-github" class="headerlink" title="win10+node.js+git+github"></a>win10+node.js+git+github</h3><ul>
 <li>node.js下载地址:<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a></li>
 <li>git下载地址:<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></li>
 <li>github地址:<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a><br>node.js与git只要傻瓜式安装即可，至少我安装时没有修改任何地方。<br>在Windows命令窗口可以用 <code>node -v</code>,<code>npm -v</code>,<code>git --version</code>来检测是否安装成功。</li>
 </ul>
-<h4 id="申请repository"><a href="#申请repository" class="headerlink" title="申请repository"></a>申请repository</h4><p>注册并申请一个以 username.github.io 命名的仓库<br><img src="/images/h001.png" alt=""><br>必须按上述规则命名,我原先未按该规则命名，会出现 <strong>There isn’t a GitHub Pages site here.</strong>，然后按着指示一步步点击发现了这个规定<br><img src="/images/h003.png" alt=""><br><img src="/images/h002.png" alt=""></p>
-<h4 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h4><p>在合适的地方新建一个文件夹，用来存放自己的博客文件。如 <strong>D:\myblog</strong> 。<br><br>在该目录下右键点击 <code>Git Bash Here</code>，打开git控制窗口，在博客根目录下输入<code>npm i hexo-cli -g</code>安装hexo。可以输入<code>hexo -v</code>查看是否安装成功。<br><br>之后是初始化文件夹<code>hexo init</code>，然后输入<code>npm install</code>安装必备组件。<br></p>
+<h3 id="申请repository"><a href="#申请repository" class="headerlink" title="申请repository"></a>申请repository</h3><p>注册并申请一个以 <strong>username.github.io</strong> 命名的仓库<br><img src="/images/h001.png" alt=""><br>必须按上述规则命名,我原先未按该规则命名，会出现 <strong>There isn’t a GitHub Pages site here.</strong>，然后按着指示一步步点击发现了这个规定<br><img src="/images/h003.png" alt=""><br><img src="/images/h002.png" alt=""></p>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>在合适的地方新建一个文件夹，用来存放自己的博客文件。如 <strong>D:\myblog</strong> 。<br><br>在该目录下右键点击 <code>Git Bash Here</code>，打开git控制窗口，在博客根目录下输入<code>npm i hexo-cli -g</code>安装hexo。可以输入<code>hexo -v</code>查看是否安装成功。<br><br>之后是初始化文件夹<code>hexo init</code>，然后输入<code>npm install</code>安装必备组件。<br></p>
 <ul>
 <li>常用命令：<br>-<code>hexo g</code>：生产静态网页<br>-<code>hexo s</code>: 打开本地服务器测试</li>
 </ul>
 <p>在浏览器输入：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 即可访问网页</p>
-<p>####连接</p>
+<h2 id="连接Github与本地"><a href="#连接Github与本地" class="headerlink" title="连接Github与本地"></a>连接Github与本地</h2><pre><code>git config --global user.name &quot;github_username&quot;
+git config --global user.email &quot;your_eamil@example.com&quot;</code></pre><h3 id="创建ssh-key"><a href="#创建ssh-key" class="headerlink" title="创建ssh key"></a>创建ssh key</h3><p><strong>首先要看你的电脑是否已有ssh key</strong><br>直接到 <code>C:\Users\username\.ssh</code> 看是否有.pub文件<br>或者在在git控制窗口输入以下代码查看文件</p>
+<pre><code>cd ~/.ssh
+ls</code></pre><br>
+
+<p><strong>创建一个ssh文件</strong></p>
+<pre><code>ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</code></pre><p>上面的代码省略了 -f 参数，用于指定密匙生成的文件，如xxx.pub。因此运行完上述命令后，会出现 </p>
+<pre><code>Enter file in which to save the key (/c/Users/you/.ssh/id_rsa): [Press enter]</code></pre><p>让你输入文件名。当然，你也可以不输入文件名，使用默认文件名（推荐），那么就会生成 id_rsa 和 id_rsa.pub 两个秘钥文件。<br><br><br><strong>输入ssh密码</strong>。密码输入不可见。可以不输。</p>
+<pre><code>Enter passphrase (empty for no passphrase):
+Enter same passphrase again:</code></pre><br>
+
+<p>之后会出现：</p>
+<pre><code>Your identification has been saved in /c/Users/you/.ssh/id_rsa.
+Your public key has been saved in /c/Users/you/.ssh/id_rsa.pub.
+The key fingerprint is:
+01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com</code></pre><p>表明ssh搭建成功。</p>
+<h3 id="将ssh添加到github上"><a href="#将ssh添加到github上" class="headerlink" title="将ssh添加到github上"></a>将ssh添加到github上</h3><ol>
+<li>首先你需要拷贝 id_rsa.pub 文件的内容，你可以用编辑器打开文件复制，也可以用git命令复制该文件的内容，如：<pre><code>$ clip &lt; ~/.ssh/id_rsa.pub</code></pre>执行完上面的命令。内容就已经复制到你的剪贴板了。</li>
+<li>登录你的github账号，从右上角的账户设置进入，然后点击菜单栏的 SSH and GPG keys 进入页面添加 SSH key。</li>
+<li>点击 New SSH key 按钮添加一个 SSH key 。<br>把你复制的 SSH key 代码粘贴到 key 所对应的输入框中，记得 SSH key 代码的前后不要留有空格或者回车。<br>当然，上面的 Title 所对应的输入框你也可以输入一个该 SSH key 显示在 github 上的一个别名。默认的会使用你的邮件名称。</li>
+</ol>
 <h3 id="搭建教程来源"><a href="#搭建教程来源" class="headerlink" title="搭建教程来源"></a>搭建教程来源</h3><ul>
 <li>主体搭建参考来源：<a href="https://godweiyang.com/2018/04/13/hexo-blog/#toc-heading-1" target="_blank" rel="noopener">韦阳的博客</a> 安装noed.js,git,hexo和新建github的repository都是参考该博客一步一步完成。  </li>
 <li>Github添加ssh key：(<a href="https://www.cnblogs.com/ayseeing/p/3572582.html" target="_blank" rel="noopener">https://www.cnblogs.com/ayseeing/p/3572582.html</a>)</li>
@@ -900,7 +920,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">479</span>&nbsp;字
+                class="white-color">963</span>&nbsp;字
             
 
 	    <br>
