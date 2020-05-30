@@ -345,8 +345,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-%E5%85%B6%E4%BB%96/">
-                                <span class="chip bg-color">-博客搭建 -其他</span>
+                            <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                                <span class="chip bg-color">博客搭建</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%85%B6%E4%BB%96/">
+                                <span class="chip bg-color">其他</span>
                             </a>
                         
                     </div>
@@ -384,7 +388,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    477
                 </div>
                 
 
@@ -396,7 +400,30 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><h4 id="win10-node-js-git-github"><a href="#win10-node-js-git-github" class="headerlink" title="win10+node.js+git+github"></a>win10+node.js+git+github</h4><ul>
+<li>node.js下载地址:<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a></li>
+<li>git下载地址:<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></li>
+<li>github地址:<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a><br>node.js与git只要傻瓜式安装即可，至少我安装时没有修改任何地方。<br>在Windows命令窗口可以用 <code>node -v</code>,<code>npm -v</code>,<code>git --version</code>来检测是否安装成功。</li>
+</ul>
+<h4 id="申请repository"><a href="#申请repository" class="headerlink" title="申请repository"></a>申请repository</h4><p>注册并申请一个以 username.github.io 命名的仓库<br><img src="/images/h001.png" alt=""><br>必须按上述规则命名,我原先未按该规则命名，会出现 <strong>There isn’t a GitHub Pages site here.</strong>，然后按着指示一步步点击发现了这个规定<br><img src="/images/h003.png" alt=""><br><img src="/images/h002.png" alt=""></p>
+<h4 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h4><p>在合适的地方新建一个文件夹，用来存放自己的博客文件。如 <strong>D:\myblog</strong> 。<br><br>在该目录下右键点击 <code>Git Bash Here</code>，打开git控制窗口，在博客根目录下输入<code>npm i hexo-cli -g</code>安装hexo。可以输入<code>hexo -v</code>查看是否安装成功。<br><br>之后是初始化文件夹<code>hexo init</code>，然后输入<code>npm install</code>安装必备组件。<br></p>
+<ul>
+<li>常用命令：<br>-<code>hexo g</code>：生产静态网页<br>-<code>hexo s</code>: 打开本地服务器测试</li>
+</ul>
+<p>在浏览器输入：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 即可访问网页</p>
+<p>####连接</p>
+<h3 id="搭建教程来源"><a href="#搭建教程来源" class="headerlink" title="搭建教程来源"></a>搭建教程来源</h3><ul>
+<li>主体搭建参考来源：<a href="https://godweiyang.com/2018/04/13/hexo-blog/#toc-heading-1" target="_blank" rel="noopener">韦阳的博客</a> 安装noed.js,git,hexo和新建github的repository都是参考该博客一步一步完成。  </li>
+<li>Github添加ssh key：(<a href="https://www.cnblogs.com/ayseeing/p/3572582.html" target="_blank" rel="noopener">https://www.cnblogs.com/ayseeing/p/3572582.html</a>)</li>
+<li>博客主题更换，我使用的是hexo-theme-matery，<ul>
+<li>主题的原地址：<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="noopener">闪烁之狐</a> 里面的文档已经将主题介绍的很详细，且有中文文档。<br>只需跟着文档一步一步修改个人配置。</li>
+<li>主题的个性化参考来源一（具体的css与js修改方法）: (<a href="https://yafine-blog.cn/posts/8c84.html" target="_blank" rel="noopener">https://yafine-blog.cn/posts/8c84.html</a>)</li>
+<li>主题的个性化参考来源二（花里胡哨的樱花特效）：(<a href="https://juejin.im/post/5e9d4a846fb9a03c46494713" target="_blank" rel="noopener">https://juejin.im/post/5e9d4a846fb9a03c46494713</a>)</li>
+<li>主题的动漫人物参考与：<a href="https://godweiyang.com/2018/04/13/hexo-blog/#toc-heading-1" target="_blank" rel="noopener">韦阳的博客</a></li>
+</ul>
+</li>
+</ul>
+
             </div>
             <hr/>
 
@@ -459,8 +486,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-%E5%85%B6%E4%BB%96/">
-                                    <span class="chip bg-color">-博客搭建 -其他</span>
+                                <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                                    <span class="chip bg-color">博客搭建</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%85%B6%E4%BB%96/">
+                                    <span class="chip bg-color">其他</span>
                                 </a>
                             
                         </div>
@@ -546,7 +577,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            简单记录搭建(hexo+github)博客的过程
                         
                     </div>
                     <div class="publish-info">
@@ -569,8 +600,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-%E5%85%B6%E4%BB%96/">
-                        <span class="chip bg-color">-博客搭建 -其他</span>
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                        <span class="chip bg-color">博客搭建</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%85%B6%E4%BB%96/">
+                        <span class="chip bg-color">其他</span>
                     </a>
                     
                 </div>
@@ -596,7 +631,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            hello world!
                         
                     </div>
                     <div class="publish-info">
@@ -865,7 +900,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">0</span>&nbsp;字
+                class="white-color">479</span>&nbsp;字
             
 
 	    <br>
