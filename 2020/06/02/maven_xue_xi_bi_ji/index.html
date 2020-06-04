@@ -408,14 +408,14 @@ Maven的安装很多IDE已经内嵌了Maven，但最好使用自己下载的Mave
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    2.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    11 分
                 </div>
                 
                 
@@ -531,8 +531,7 @@ Maven的安装很多IDE已经内嵌了Maven，但最好使用自己下载的Mave
 <h4 id="如何找到需要的Maven坐标"><a href="#如何找到需要的Maven坐标" class="headerlink" title="如何找到需要的Maven坐标"></a>如何找到需要的Maven坐标</h4><p><a href="https://mvnrepository.com/" target="_blank" rel="noopener">https://mvnrepository.com/</a></p>
 <p>在该网站输入自己需要的jar包名称，即可得到对应的坐标。</p>
 <p><img src="/images/m002.png" alt=""></p>
-<h4 id="IDEA集成Maven插件"><a href="#IDEA集成Maven插件" class="headerlink" title="IDEA集成Maven插件"></a>IDEA集成Maven插件</h4><p>在IDEA中配置自己的Maven</p>
-<p>File-Settings-Buiud,Execution,Deployment-Build Tools-Maven:</p>
+<h4 id="在IDEA中配置自己的Maven"><a href="#在IDEA中配置自己的Maven" class="headerlink" title="在IDEA中配置自己的Maven"></a>在IDEA中配置自己的Maven</h4><p>File-Settings-Buiud,Execution,Deployment-Build Tools-Maven:</p>
 <ul>
 <li>Maven home directory:你下载解压的Maven目录</li>
 <li>User settings file:配置的settings.xml文件</li>
@@ -540,7 +539,83 @@ Maven的安装很多IDE已经内嵌了Maven，但最好使用自己下载的Mave
 <li>配置Maven Runner的 VM Options</li>
 </ul>
 <p><img src="/images/m003.png" alt=""></p>
-<h2 id="Maven的规则有哪些"><a href="#Maven的规则有哪些" class="headerlink" title="Maven的规则有哪些"></a>Maven的规则有哪些</h2><h3 id="依赖管理"><a href="#依赖管理" class="headerlink" title="依赖管理"></a>依赖管理</h3><h4 id="依赖范围"><a href="#依赖范围" class="headerlink" title="依赖范围"></a>依赖范围</h4><h4 id="依赖原则"><a href="#依赖原则" class="headerlink" title="依赖原则"></a>依赖原则</h4><h4 id="统一配置jar包版本"><a href="#统一配置jar包版本" class="headerlink" title="统一配置jar包版本"></a>统一配置jar包版本</h4><h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><h3 id="聚合"><a href="#聚合" class="headerlink" title="聚合"></a>聚合</h3><h2 id="本人使用Maven遇到的问题"><a href="#本人使用Maven遇到的问题" class="headerlink" title="本人使用Maven遇到的问题"></a>本人使用Maven遇到的问题</h2>
+<h2 id="Maven的规则有哪些"><a href="#Maven的规则有哪些" class="headerlink" title="Maven的规则有哪些"></a>Maven的规则有哪些</h2><h3 id="依赖管理"><a href="#依赖管理" class="headerlink" title="依赖管理"></a>依赖管理</h3><h4 id="依赖的配置"><a href="#依赖的配置" class="headerlink" title="依赖的配置"></a>依赖的配置</h4><pre class="line-numbers language-xml"><code class="language-xml">   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">></span></span>
+        <span class="token comment" spellcheck="true">&lt;!-- 常用web依赖，很多web容器都提供，所以不参与打包为provided--></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>javax.servlet<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>servlet-api<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>3.0-alpha-1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">></span></span>provided<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>javax.servlet.jsp<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>jsp-api<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>2.2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">></span></span>provided<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+        <span class="token comment" spellcheck="true">&lt;!-- 单元测试 --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>junit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>junit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>4.13<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">></span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="依赖范围"><a href="#依赖范围" class="headerlink" title="依赖范围"></a>依赖范围</h4><p>使用<code>&lt;scope&gt;</code>标签配置依赖范围</p>
+<p>compile：编译依赖范围。如果没有指定依赖范围，则默认为compile。对编译，测试，打包运行生效。</p>
+<p>test：测试依赖范围。只对测试生效。如单元测试<strong>Junit</strong>。</p>
+<p>provided：已提供依赖范围。对编译，测试生效，打包运行时无效。如<strong>servlet-api</strong>和<strong>jsp-api</strong>，很多web容器（Tomact等）都会提供这两个依赖，没必要重复引入。</p>
+<p>runtime：运行时依赖范围。在测试和打包运行时生效。如<strong>JDBC</strong>驱动，编译时只需使用JDK提供的JDBC接口，只有在测试或者运行项目时才需要实现上述接口具体实现的JDBC驱动。</p>
+<p>还有system，import等依赖范围。</p>
+<h4 id="依赖原则"><a href="#依赖原则" class="headerlink" title="依赖原则"></a>依赖原则</h4><p>依赖的传递性和依赖范围：假如项目A依赖项目B，项目B依赖项目C。则A对于B是第一直接依赖，B对于C是第二直接依赖，A对于C是传递性依赖。中间交叉单元格表示传递性依赖范围。</p>
+<p><img src="/images/m004.jpg" alt=""></p>
+<p>目前我认为只要理解第二直接依赖的范围为compile时，才能传递依赖。</p>
+<p>路径最短者优先：A-&gt;B-&gt;C-&gt;X(1.0),A-&gt;D-&gt;X(2.0),X是A的传递性依赖，此时有两个版本的X依赖，我们选择路径短的那个，即X(2.0);</p>
+<p>第一声明者优先：A-&gt;B-&gt;X(1.0),A-&gt;D-&gt;X(2.0),此时两个X依赖路径相同，那么根据pom.xml中<code>&lt;dependency&gt;</code>配置的先后来判断，先配置的采用。</p>
+<h4 id="统一配置jar包版本"><a href="#统一配置jar包版本" class="headerlink" title="统一配置jar包版本"></a>统一配置jar包版本</h4><p>有时候需要保证同一种jar包的版本相同，前最好能够修改一处，然后所有相关版本全部改变，可以使用<code>&lt;properties&gt;</code>标签</p>
+<pre class="line-numbers language-xml"><code class="language-xml">  <span class="token comment" spellcheck="true">&lt;!-- 自定义spring.version标签，表明spring版本 --></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>properties</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>spring.version</span><span class="token punctuation">></span></span>4.1.3.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>spring.version</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>properties</span><span class="token punctuation">></span></span>   
+  <span class="token comment" spellcheck="true">&lt;!-- 使用自定义标签表明版本 --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-context<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>${spring.version}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>${spring.version}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="聚合和继承"><a href="#聚合和继承" class="headerlink" title="聚合和继承"></a>聚合和继承</h3><p>一般一个项目的子模块都应该使用相同的·<code>&lt;groupId&gt;</code>，一起开发时<code>&lt;version&gt;</code>也应该相同，<code>&lt;artifactId&gt;</code>的前缀也应该相同</p>
+<h4 id="聚合"><a href="#聚合" class="headerlink" title="聚合"></a>聚合</h4><p>新建一个工程，聚合多个子模块。</p>
+<p><img src="/images/m005.png" alt=""></p>
+<p>聚合模块的打包方式必须为pom，<code>&lt;module&gt;</code>标签中即为聚合的子项目。标签中填的是当前以当前聚合工程pom.xml为起点的相对路径。（一般，为了快速浏览，模块所处的目录名称应当与其artifactId一致）</p>
+<h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><p>可在聚合模块下新增一个普通目录，如account-parent,在该目录下新建一个pom.xml，打包方式也为pom。</p>
+<p><img src="/images/m006.png" alt=""></p>
+<p>在子模块中引用父工程，使用<code>&lt;parent&gt;</code>标签：</p>
+<p><img src="/images/m007.png" alt=""></p>
+<p>其中的<code>&lt;relativePath&gt;</code>是相对路径，指定从该工程的pom.xml出发，查找父工程的pom.xml</p>
+<p>可继承的pom元素：groupId，version，build，properties，description，dependencies</p>
+<p>依赖的继承：父模块中的依赖用<code>&lt;dependencyMaragement&gt;</code>包住，子模块中只要简单配置依赖的groupId，artifactId即可获取对应的依赖信息。</p>
+<h2 id="本人使用Maven遇到的问题"><a href="#本人使用Maven遇到的问题" class="headerlink" title="本人使用Maven遇到的问题"></a>本人使用Maven遇到的问题</h2><p>创建test的resource文件夹：选中文件夹，右键 -&gt;Mark Directory as -&gt; Sources Root</p>
+<p>IDEA动态模板：Settings -&gt; live(search) -&gt; Template Group -&gt; Live Temlate,同时要定义使用的文件范围。</p>
+<p>快照：有些项目版本为 1.0-SNAPSHOT。SNAPSHOT意为快照，表明项目还处于开发中。</p>
+<p>标准的单元测试：</p>
+<ul>
+<li>准备测试类及数据</li>
+<li>执行要测试的行为</li>
+<li>检查结果</li>
+</ul>
+<p>IDEA导入Maven项目：File -&gt; New Project From Existing Sources -&gt; Select File or Directory to Import -&gt;</p>
+<p>选中Maven工程文件夹 -&gt; Import project from external model;</p>
+<p>还有一种好像是导入pom.xml文件即可。</p>
+<h4 id="Maven-Web-项目"><a href="#Maven-Web-项目" class="headerlink" title="Maven Web 项目"></a>Maven Web 项目</h4><p>基于Java的Web应用，其标椎的打包方式为war。</p>
+<p>一个war包至少包含WEB-INF,WEB-INF下必须要有资源表述文件web.xml</p>
+<p><img src="/images/m008.png" alt=""></p>
+
             </div>
             <hr />
 
@@ -1153,7 +1228,7 @@ Maven的安装很多IDE已经内嵌了Maven，但最好使用自己下载的Mave
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">3.1k</span>
+            <span class="white-color">4.2k</span>
             
 
             
@@ -1286,6 +1361,8 @@ $(function () {
     
 
     <!-- 雪花特效 -->
+    
+    <script type="text/javascript" src="/libs/others/snow.js"></script>
     
 
 </body>
