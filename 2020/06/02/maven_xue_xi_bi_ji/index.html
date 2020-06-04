@@ -4,14 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo+Github博客搭建学习记录, 篾匠">
+    <meta name="keywords" content="maven学习笔记, 篾匠">
     <meta name="baidu-site-verification" content="fmlEuI34ir" />
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48" />
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" />
-    <meta name="description" content="环境配置win10+node.js+git+github
-node.js下载地址:https://nodejs.org/en/download/
-git下载地址:https://git-scm.com/
-github地址:https://g">
+    <meta name="description" content="什么是mavenMaven主要服务于基于Java平台的项目构建、依赖管理和项目信息管理。
+Maven的安装很多IDE已经内嵌了Maven，但最好使用自己下载的Maven，因为有时会使用命令行的Maven，如果版本不一致，可能会造成构建行为的">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +17,7 @@ github地址:https://g">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hexo+Github博客搭建学习记录 | 篾匠</title>
+    <title>maven学习笔记 | 篾匠</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -251,13 +249,13 @@ github地址:https://g">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Hexo+Github博客搭建学习记录
+                        maven学习笔记
                     </div>
                 </div>
             </div>
@@ -368,12 +366,12 @@ github地址:https://g">
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" target="_blank">
-                            <span class="chip bg-color">博客搭建</span>
+                        <a href="/tags/maven%E4%BD%BF%E7%94%A8/" target="_blank">
+                            <span class="chip bg-color">maven使用</span>
                         </a>
                         
-                        <a href="/tags/%E5%85%B6%E4%BB%96/" target="_blank">
-                            <span class="chip bg-color">其他</span>
+                        <a href="/tags/maven/" target="_blank">
+                            <span class="chip bg-color">maven</span>
                         </a>
                         
                     </div>
@@ -384,8 +382,8 @@ github地址:https://g">
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/%E5%85%B6%E4%BB%96/" class="post-category" target="_blank">
-                            其他
+                        <a href="/categories/maven/" class="post-category" target="_blank">
+                            maven
                         </a>
                         
                     </div>
@@ -396,7 +394,7 @@ github地址:https://g">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-30
+                    2020-06-02
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -410,14 +408,14 @@ github地址:https://g">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    6 分
                 </div>
                 
                 
@@ -433,69 +431,116 @@ github地址:https://g">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="win10-node-js-git-github"><a href="#win10-node-js-git-github" class="headerlink" title="win10+node.js+git+github"></a>win10+node.js+git+github</h3><ul>
-<li>node.js下载地址:<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a></li>
-<li>git下载地址:<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></li>
-<li>github地址:<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a><br>node.js与git只要傻瓜式安装即可，至少我安装时没有修改任何地方。<br>在Windows命令窗口可以用 <code>node -v</code>,<code>npm -v</code>,<code>git --version</code>来检测是否安装成功。</li>
-</ul>
-<h3 id="申请repository"><a href="#申请repository" class="headerlink" title="申请repository"></a>申请repository</h3><p>注册并申请一个以 <strong>username.github.io</strong> 命名的仓库<br><img src="/images/h001.png" alt=""><br>必须按上述规则命名,我原先未按该规则命名，会出现 <strong>There isn’t a GitHub Pages site here.</strong>，然后按着指示一步步点击发现了这个规定<br><img src="/images/h003.png" alt=""><br><img src="/images/h002.png" alt=""></p>
-<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>在合适的地方新建一个文件夹，用来存放自己的博客文件。如 <strong>D:\myblog</strong> 。<br><br>在该目录下右键点击 <code>Git Bash Here</code>，打开git bash窗口，在博客根目录下输入<code>npm i hexo-cli -g</code>安装hexo。<br>可以输入<code>hexo -v</code>查看是否安装成功。<br><br>之后是初始化文件夹<code>hexo init</code>，然后输入<code>npm install</code>安装必备组件。<br></p>
-<p>在浏览器输入：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 即可访问网页</p>
-<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><p>刚开始我按照教程为node.js配置了国内阿里的镜像，</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> config <span class="token keyword">set</span> registry https://registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>不知道是写错了还是什么原因，出现了npm err安装报错。可以通过以下方式解决：<br>先清除以前的代理设置</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> config <span class="token keyword">set</span> proxy null
-<span class="token function">npm</span> config <span class="token keyword">set</span> https-proxy null<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>重新设置</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> config registry http://registry.cnpmjs.org/<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="连接Github与本地"><a href="#连接Github与本地" class="headerlink" title="连接Github与本地"></a>连接Github与本地</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> config --global user.name <span class="token string">"github_username"</span>
-<span class="token function">git</span> config --global user.email <span class="token string">"your_eamil@example.com"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h3 id="创建ssh-key"><a href="#创建ssh-key" class="headerlink" title="创建ssh key"></a>创建ssh key</h3><p><strong>首先要看你的电脑是否已有ssh key</strong><br>直接到 <code>C:\Users\username\.ssh</code> 看是否有.pub文件<br>或者在在git控制窗口输入以下代码查看文件</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">cd</span> ~/.ssh
-<span class="token function">ls</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p><strong>创建一个ssh文件</strong></p>
-<pre class="line-numbers language-bash"><code class="language-bash">ssh-keygen -t rsa -C <span class="token string">"your_email@example.com"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>上面的代码省略了 -f 参数，用于指定密匙生成的文件，如xxx.pub。因此运行完上述命令后，会出现 </p>
-<pre class="line-numbers language-bash"><code class="language-bash">Enter <span class="token function">file</span> <span class="token keyword">in</span> <span class="token function">which</span> to save the key <span class="token punctuation">(</span>/c/Users/you/.ssh/id_rsa<span class="token punctuation">)</span>: <span class="token punctuation">[</span>Press enter<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>让你输入文件名。当然，你也可以不输入文件名，使用默认文件名（推荐），那么就会生成 id_rsa 和 id_rsa.pub 两个秘钥文件。<br><strong>输入ssh密码</strong>。密码输入不可见。可以不设密码。</p>
-<pre class="line-numbers language-bash"><code class="language-bash">Enter passphrase <span class="token punctuation">(</span>empty <span class="token keyword">for</span> no passphrase<span class="token punctuation">)</span>:
-Enter same passphrase again:<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>之后会出现：</p>
-<pre class="line-numbers language-bash"><code class="language-bash">Your identification has been saved <span class="token keyword">in</span> /c/Users/you/.ssh/id_rsa.
-Your public key has been saved <span class="token keyword">in</span> /c/Users/you/.ssh/id_rsa.pub.
-The key fingerprint is:
-01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>表明ssh搭建成功。</p>
-<h3 id="将ssh添加到github上"><a href="#将ssh添加到github上" class="headerlink" title="将ssh添加到github上"></a>将ssh添加到github上</h3><ol>
-<li>首先你需要拷贝 id_rsa.pub 文件的内容，你可以用编辑器打开文件复制，也可以用git命令复制该文件的内容，如：<pre class="line-numbers language-bash"><code class="language-bash">$ clip <span class="token operator">&lt;</span> ~/.ssh/id_rsa.pub<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-执行完上面的命令。内容就已经复制到你的剪贴板了。</li>
-<li>登录你的github账号，从右上角的账户设置进入，然后点击菜单栏的 SSH and GPG keys 进入页面添加 SSH key。</li>
-<li>点击 New SSH key 按钮添加一个 SSH key 。<br><img src="/images/h007.png" alt=""><br>把你复制的 SSH key 代码粘贴到 key 所对应的输入框中，记得 SSH key 代码的前后不要留有空格或者回车。<br>当然，上面的 Title 是SSH key 显示在 github 上的一个别名，可以随意取。</li>
-<li>测试ssh key是否添加成功:<br>在git bash中输入<code>$ ssh -T git@github.com</code> 出现如下警告:<pre class="line-numbers language-bash"><code class="language-bash">The authenticity of host <span class="token string">'github.com (207.97.227.239)'</span> can't be established.
-RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
-Are you sure you want to <span class="token keyword">continue</span> connecting <span class="token punctuation">(</span>yes/no<span class="token punctuation">)</span>?<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<strong>输入yes</strong>，然后按指示<code>Enter passphrase for key &#39;/c/Users/Administrator/.ssh/id_rsa&#39;:</code>输入密码:<br>密码输入正确后出现如下语句，表明成功设置了ssh key。<pre class="line-numbers language-bash"><code class="language-bash">Hi username<span class="token operator">!</span> You've successfully authenticated, but GitHub does not
-provide shell access.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-</li>
-<li>我并不清楚ssh具体的作用是什么。估计应该是一个密码的作用，当你要把本地的内容上传到github仓库时，它会要你输入ssh key，如下图所示，输入正确即可将内容上传到github中<br><img src="/images/h004.png" alt=""><br><img src="/images/h005.png" alt=""></li>
-<li>配置博客根目录下的_config.yml，按照文档的注释修改即可。主要是配置deploy的相关属性。repository为你的github仓库地址。<br><img src="/images/h006.png" alt=""><br>配置上述类型文件时每一个配置项都是名称+冒号+空格＋设置参数配置而成。必须要有空格，否则会出现<br><code>FATAL can not read a block mapping entry</code>错误。</li>
+                <h2 id="什么是maven"><a href="#什么是maven" class="headerlink" title="什么是maven"></a>什么是maven</h2><p>Maven主要服务于基于Java平台的<strong>项目构建</strong>、<strong>依赖管理</strong>和<strong>项目信息管理</strong>。</p>
+<h3 id="Maven的安装"><a href="#Maven的安装" class="headerlink" title="Maven的安装"></a>Maven的安装</h3><p>很多IDE已经内嵌了Maven，但最好使用自己下载的Maven，因为有时会使用命令行的Maven，如果版本不一致，可能会造成构建行为的不一致。</p>
+<p>Maven官网下载地址：<a href="http://maven.apache.org/download.cgi" target="_blank" rel="noopener">http://maven.apache.org/download.cgi</a></p>
+<p>下载后直接解压到合适的路径即可（全英文路径）。</p>
+<p>解压前确保已经配置了Java环境。然后再配置Maven的环境变量：M2_HOME。</p>
+<h2 id="为什么要使用Maven"><a href="#为什么要使用Maven" class="headerlink" title="为什么要使用Maven"></a>为什么要使用Maven</h2><h3 id="Maven的作用"><a href="#Maven的作用" class="headerlink" title="Maven的作用"></a>Maven的作用</h3><ol>
+<li>十分容易的获取项目所需要的jar包，不用自己一个个去网上搜索下载。</li>
+<li>十分容易的添加项目所需要的jar包，不用自己一个个手动添加。</li>
+<li>减少了jar包所占的磁盘空间。Maven所有的jar包并不存放在项目中，而是存放在一个仓库中，需要时根据<strong>坐标</strong>导入即可，不需要每次都复制到工程文件夹中，导致重复的jar包占据更大的磁盘空间。</li>
+<li>解决jar包可能存在的依赖问题和冲突问题（最短路劲优先和先声明者优先）。jar包往往不是单独使用的，而是互相依赖的。</li>
+<li>可将一个大工程拆分成多个工程模块。</li>
+<li>实现项目的分布式部署。</li>
+<li>Maven抽象了一个完整的构建生命周期模型、消除了构建的重复、标准化了构建过程并可以进行自动化构建。</li>
 </ol>
-<h3 id="写文章、发布文章"><a href="#写文章、发布文章" class="headerlink" title="写文章、发布文章"></a>写文章、发布文章</h3><p>在git窗口中输入 <code>hexo new post &quot;article_name&quot;</code> 即可创建一个该文章的.md文件。在博客根目录-source-_posts中。<br>此时你可以使用文本编辑器对文章内容进行编辑。</p>
-<h2 id="搭建教程来源"><a href="#搭建教程来源" class="headerlink" title="搭建教程来源"></a>搭建教程来源</h2><ul>
-<li>主体搭建参考来源：<a href="https://godweiyang.com/2018/04/13/hexo-blog/#toc-heading-1" target="_blank" rel="noopener">韦阳的博客</a> 安装noed.js,git,hexo和新建github的repository都是参考该博客一步一步完成。  </li>
-<li>Github添加ssh key：(<a href="https://www.cnblogs.com/ayseeing/p/3572582.html" target="_blank" rel="noopener">https://www.cnblogs.com/ayseeing/p/3572582.html</a>)</li>
-<li>错误一：<a href="https://blog.csdn.net/dajian790626/article/details/78595684?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-5.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-5.nonecase" target="_blank" rel="noopener">github昵称问题</a></li>
-<li>错误二：<a href="https://blog.csdn.net/weixin_42711399/article/details/84350368" target="_blank" rel="noopener">npm err安装报错</a></li>
-<li>不蒜子：<a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="noopener">http://ibruce.info/2015/04/04/busuanzi/</a></li>
-<li>博客主题更换，我使用的是hexo-theme-matery，<ul>
-<li>主题的原地址：<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="noopener">闪烁之狐</a> 里面的文档已经将主题介绍的很详细，且有中文文档。<br>只需跟着文档一步一步修改个人配置。</li>
-<li>主题的个性化参考来源一（具体的css与js修改方法）: (<a href="https://yafine-blog.cn/posts/8c84.html" target="_blank" rel="noopener">https://yafine-blog.cn/posts/8c84.html</a>)</li>
-<li>主题的个性化参考来源二（花里胡哨的樱花特效）：(<a href="https://juejin.im/post/5e9d4a846fb9a03c46494713" target="_blank" rel="noopener">https://juejin.im/post/5e9d4a846fb9a03c46494713</a>)</li>
-<li>主题的动漫人物参考与：<a href="https://godweiyang.com/2018/04/13/hexo-blog/#toc-heading-1" target="_blank" rel="noopener">韦阳的博客</a></li>
-</ul>
+<h3 id="何为构建"><a href="#何为构建" class="headerlink" title="何为构建"></a>何为构建</h3><p>构建环节有：</p>
+<ul>
+<li><p>清理：删除以前的编译结果</p>
+</li>
+<li><p>编译：对写好的代码进行编译</p>
+</li>
+<li><p>测试：对写好的代码进行测试</p>
+</li>
+<li><p>报告：编译与测试会产生报告，对于代码可行性的反馈</p>
+</li>
+<li><p>打包：将工程封装为一个压缩文件（war、jar）</p>
+</li>
+<li><p>安装：将打包的结果安装到本地仓库</p>
+</li>
+<li><p>部署</p>
 </li>
 </ul>
-
+<h3 id="Maven项目目录"><a href="#Maven项目目录" class="headerlink" title="Maven项目目录"></a>Maven项目目录</h3><p><img src="/images/m001.png" alt=""></p>
+<p>上图是一个Maven项目约定的目录结构，不同的是多了一个webapp，这是web项目需要增加的文件夹，用于存放页面资源。</p>
+<h4 id="约定的目录结构"><a href="#约定的目录结构" class="headerlink" title="约定的目录结构"></a>约定的目录结构</h4><p>src/main/java：主程序源码</p>
+<p>src/main/resources:用于存放主程序的配置文件与资源文件</p>
+<p>src/test/java：测试程序源码</p>
+<p>src/test/resource：用于测试的配置文件和资源文件</p>
+<p>pom.xml：Maven核心文件</p>
+<p>（约定&gt;配置&gt;编码）</p>
+<h4 id="其他目录"><a href="#其他目录" class="headerlink" title="其他目录"></a>其他目录</h4><p>target：用于存放输出文件（编译后的.class文件，打包后的工程文件等）</p>
+<p>webapp：用于存放web项目的页面资源（js，css，images等）</p>
+<h3 id="Maven常用命令和Maven生命周期"><a href="#Maven常用命令和Maven生命周期" class="headerlink" title="Maven常用命令和Maven生命周期"></a>Maven常用命令和Maven生命周期</h3><h4 id="Maven常用命令"><a href="#Maven常用命令" class="headerlink" title="Maven常用命令"></a>Maven常用命令</h4><p> <code>mvn clean</code>:清理上一次构建生成的文件</p>
+<p><code>mvn comile</code>:编译项目的主源码（一般即编译src/main/java目录下的Java文件）</p>
+<p><code>mvn test</code>:使用单元测试框架测试运行，测试代码不会被打包或部署</p>
+<p><code>mvn package</code>:接收编译好的代码，打包成可发布的格式，如jar</p>
+<p><code>mvn install</code>:将打包好的包安装到Maven本地仓库</p>
+<p><code>mvn deploy</code>:将最终的包复制到远程仓库，供其他开发人员使用。</p>
+<h4 id="Maven生命周期"><a href="#Maven生命周期" class="headerlink" title="Maven生命周期"></a>Maven生命周期</h4><p>Maven有三套独立的生命周期。（clean、default、site）</p>
+<ul>
+<li><p>清理生命周期：clean</p>
+</li>
+<li><p>默认生命周期：compile、test、package、install、deploy</p>
+</li>
+<li><p>站点生命周期</p>
+</li>
+</ul>
+<p>Maven的生命周期定义各个构建环节的执行顺序；Maven的核心仅仅定义了抽象的生命周期，具体的任务都是交由插件完成的。</p>
+<p>执行后面的命令，前面的命令也会被执行。</p>
+<h4 id="Maven插件【插件目标，插件绑定】（还需要在了解）"><a href="#Maven插件【插件目标，插件绑定】（还需要在了解）" class="headerlink" title="Maven插件【插件目标，插件绑定】（还需要在了解）"></a>Maven插件【插件目标，插件绑定】（还需要在了解）</h4><p>Maven的生命周期与插件互相绑定，用以完成实际的构建任务。</p>
+<p>POM中插件的全局配置：</p>
+<pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugins</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.apache.maven.plugins<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>maven-complier-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>3.3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span><span class="token punctuation">></span></span>1.8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>source</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>target</span><span class="token punctuation">></span></span>1.8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>target</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugins</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在声明插件时，进行一个全局的配置。所有基于该插件的任务，都会使用此配置。通常会需要配置maven-compiler-plugin的jdk版本。</p>
+<h2 id="如何使用Maven"><a href="#如何使用Maven" class="headerlink" title="如何使用Maven"></a>如何使用Maven</h2><h3 id="配置本地仓库与国内镜像"><a href="#配置本地仓库与国内镜像" class="headerlink" title="配置本地仓库与国内镜像"></a>配置本地仓库与国内镜像</h3><h4 id="仓库"><a href="#仓库" class="headerlink" title="仓库"></a>仓库</h4><p>Maven仓库分为本地仓库和远程仓库。本地仓库即本地存放jar包的目录。远程仓库分为私服和中央仓库。私服一般是基于企业局域网配置的仓库；中央仓库则是默认的远程仓库。</p>
+<p>仓库中存放着Maven的插件、第三方框架或工具的jar包，自己开发的项目的模块等。</p>
+<p>Maven寻找jar包的顺序为：先查找本地仓库，本地仓库没有；如果有私服，则在私服查找；私服也没有，则到中央仓库下载。</p>
+<p>最终Maven都会把jar包下载到本地仓库，Maven工程在引用本地仓库的jar包。</p>
+<h4 id="配置仓库"><a href="#配置仓库" class="headerlink" title="配置仓库"></a>配置仓库</h4><p>Maven默认的仓库为 ~/.m2/repository下，C盘空间足够可以使用该目录。</p>
+<p>也可使用 <code>&lt;LocalRepository&gt;</code>标签配置你想要的路径。修改~/.m2/settings.xml文件，如果没有可以新建；也可以修改Maven目录下的conf/settings.xml,这是全局配置。在合适的地方添加下列语句（settings.xml文件中有注释）</p>
+<pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>LocalRepository</span><span class="token punctuation">></span></span>your_path<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>LocalRepository</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="配置阿里云镜像"><a href="#配置阿里云镜像" class="headerlink" title="配置阿里云镜像"></a>配置阿里云镜像</h4><p>默认的中央仓库，在国内下载可能比较慢，可以选择配置阿里云的镜像。</p>
+<p>在上述相同位置的settings.xml文件的<code>&lt;mirrors&gt;</code>标签下配置即可</p>
+<pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirror</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">></span></span>alimaven<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>aliyun maven<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">></span></span>http://maven.aliyun.com/nexus/content/groups/public/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirrorOf</span><span class="token punctuation">></span></span>central<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirrorOf</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirror</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="Maven坐标"><a href="#Maven坐标" class="headerlink" title="Maven坐标"></a>Maven坐标</h4><p>Maven坐标，相当于一个jar包在仓库中的路径，Maven坐标包括</p>
+<p><code>&lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</code>：一般是组织，公司，域名等</p>
+<p><code>&lt;artifactId&gt;maven-complier-plugin&lt;/artifactId&gt;</code>:一般是项目名称</p>
+<p><code>&lt;version&gt;3.3&lt;/version&gt;</code>:项目工程版本</p>
+<p>寻找jar包：上面的坐标为 org.apache.maven .plugins+ maven-compiler-plugin + 3.3</p>
+<p>则在仓库的路径为：</p>
+<p>D:\MyJava\my.m2\repository\org\apache\maven\plugins\maven-compiler-plugin\3.3\maven-compiler-plugin-3.3.jar</p>
+<p>Maven根据在pom.xml中配置的坐标，然后去仓库找到对应的jar包。</p>
+<h4 id="如何找到需要的Maven坐标"><a href="#如何找到需要的Maven坐标" class="headerlink" title="如何找到需要的Maven坐标"></a>如何找到需要的Maven坐标</h4><p><a href="https://mvnrepository.com/" target="_blank" rel="noopener">https://mvnrepository.com/</a></p>
+<p>在该网站输入自己需要的jar包名称，即可得到对应的坐标。</p>
+<p><img src="/images/m002.png" alt=""></p>
+<h4 id="IDEA集成Maven插件"><a href="#IDEA集成Maven插件" class="headerlink" title="IDEA集成Maven插件"></a>IDEA集成Maven插件</h4><p>在IDEA中配置自己的Maven</p>
+<p>File-Settings-Buiud,Execution,Deployment-Build Tools-Maven:</p>
+<ul>
+<li>Maven home directory:你下载解压的Maven目录</li>
+<li>User settings file:配置的settings.xml文件</li>
+<li>Local repository：根据上面的settings.xml文件会自动配置</li>
+<li>配置Maven Runner的 VM Options</li>
+</ul>
+<p><img src="/images/m003.png" alt=""></p>
+<h2 id="Maven的规则有哪些"><a href="#Maven的规则有哪些" class="headerlink" title="Maven的规则有哪些"></a>Maven的规则有哪些</h2><h3 id="依赖管理"><a href="#依赖管理" class="headerlink" title="依赖管理"></a>依赖管理</h3><h4 id="依赖范围"><a href="#依赖范围" class="headerlink" title="依赖范围"></a>依赖范围</h4><h4 id="依赖原则"><a href="#依赖原则" class="headerlink" title="依赖原则"></a>依赖原则</h4><h4 id="统一配置jar包版本"><a href="#统一配置jar包版本" class="headerlink" title="统一配置jar包版本"></a>统一配置jar包版本</h4><h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><h3 id="聚合"><a href="#聚合" class="headerlink" title="聚合"></a>聚合</h3><h2 id="本人使用Maven遇到的问题"><a href="#本人使用Maven遇到的问题" class="headerlink" title="本人使用Maven遇到的问题"></a>本人使用Maven遇到的问题</h2>
             </div>
             <hr />
 
@@ -529,9 +574,9 @@ provide shell access.<span aria-hidden="true" class="line-numbers-rows"><span></
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Hexo+Github博客搭建学习记录》
+                    《maven学习笔记》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/05/30/hexo_github_bo_ke_da_jian_xue_xi_ji_lu/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/06/02/maven_xue_xi_bi_ji/" property="cc:attributionName"
                rel="cc:attributionURL">
                 篾匠
             </a> 采用
@@ -572,7 +617,7 @@ provide shell access.<span aria-hidden="true" class="line-numbers-rows"><span></
         repo: 'OBLISK801.github.io',
         owner: 'OBLISK801',
         admin: "OBLISK801",
-        id: '2020/05/30/hexo_github_bo_ke_da_jian_xue_xi_ji_lu/',
+        id: '2020/06/02/maven_xue_xi_bi_ji/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -855,9 +900,10 @@ provide shell access.<span aria-hidden="true" class="line-numbers-rows"><span></
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/06/02/maven_xue_xi_bi_ji/">
                     <div class="card-image">
@@ -875,9 +921,9 @@ provide shell access.<span aria-hidden="true" class="line-numbers-rows"><span></
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-06-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-06-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -890,6 +936,7 @@ provide shell access.<span aria-hidden="true" class="line-numbers-rows"><span></
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -909,7 +956,7 @@ provide shell access.<span aria-hidden="true" class="line-numbers-rows"><span></
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2020/05/30/hexo_github_bo_ke_da_jian_xue_xi_ji_lu/">
@@ -943,7 +990,6 @@ provide shell access.<span aria-hidden="true" class="line-numbers-rows"><span></
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
